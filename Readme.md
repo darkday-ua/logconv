@@ -3,13 +3,13 @@ Do not try to use it with differnet formats, better use goacces utility
 
 * Usage:
 
-cat <logfilename> | python logconv.py [OPTIONS] [> <outfile>]\
+cat *logfilename* | python logconv.py [OPTIONS] | **stdout**\
         or\
-python logconv.py <logfilename> [OPTIONS] [> <outfile>]\
+python logconv.py *logfilename* [OPTIONS] | **stdout** \
         or\
-cat <logfilename> | docker run -i logconv logfilename [OPTIONS] [> <outfile>]\
+cat *logfilename* | docker run -i **darkday443/logconv** *logfilename* [OPTIONS] | **stdout**\
                or\
-docker run -i darkday443/logconv logfilename [OPTIONS] [> <outfile>]
+docker run -i **darkday443/logconv** logfilename [OPTIONS] | **stdout**
         
 OPTIONS:\
 -v &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;verbose\
@@ -25,8 +25,8 @@ OPTIONS:\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<digit> &nbsp;&nbsp;by field number [0..17]
 
 ## Docker image
-Could be obtained with
-docker pull darkday443/logconv:latest
+Could be obtained with\
+**docker pull darkday443/logconv:latest**
 ## Git publishing
 Script tries to create Git repository at target location or uses existing one.
 Then it commits previous states, adds converted file and commits new state
